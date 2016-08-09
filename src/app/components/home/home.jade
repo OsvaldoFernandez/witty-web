@@ -1,0 +1,47 @@
+.navbar.details-navbar
+  div
+    img.witty-logo(src="../../assets/witty-logo.png")
+uib-tabset.home-tabset(active='homeCtrl.activeTab', justified="true")
+  uib-tab(index='1', heading="Discover")
+    .feed-list
+      .feed-item(ng-repeat='activity in homeCtrl.activities' ng-init='activity.showAdditional = false' ng-click='activity.showAdditional = !activity.showAdditional')
+        img.main-img(ng-src="{{homeCtrl.getIcon(activity)}}")
+        .description
+          p.title
+            | {{activity.title}}
+          p.date(ng-if='!activity.challenge')
+            | Expires: {{activity.ends | date : 'short'}}
+          p.date.challenge-date(ng-if='activity.challenge' ng-init='homeCtrl.getRemaining(activity)')
+            timer.feed-timer(countdown=' activity.diffSeconds ', interval='1000') CHALLENGE: {{ddays}} : {{hhours}} : {{mminutes}} : {{sseconds}}
+          .tags
+            span(ng-repeat='tag in activity.interests')
+              | {{homeCtrl.tags[tag].name}}
+        .buttons
+          button.confirm-button(ng-click='homeCtrl.confirmActivity(activity)')
+            img(src="assets/confirm.svg")
+        .additional-info(ng-show='activity.showAdditional')
+          p.act-description
+            | {{activity.description}}
+          p.amount-going
+            | {{activity.participants.length}} people going
+          .join-button(ng-click='homeCtrl.confirmActivity(activity)')
+            | JOIN
+  uib-tab(index='2', heading="My activities")
+    .feed-list
+      .feed-item(ng-repeat='activity in homeCtrl.my_activities' ng-init='activity.showAdditional = false' ng-click='homeCtrl.seeDetails(activity.id)')
+        img.main-img(ng-src="{{homeCtrl.getIcon(activity)}}")
+        .description
+          p.title
+            | {{activity.title}}
+          p.date(ng-if='!activity.challenge')
+            | Expires: {{activity.ends | date : 'short'}}
+          p.date.challenge-date(ng-if='activity.challenge' ng-init='homeCtrl.getRemaining(activity)')
+            timer.feed-timer(countdown=' activity.diffSeconds ', interval='1000') CHALLENGE {{ddays}} : {{hhours}} : {{mminutes}} : {{sseconds}}
+          .tags
+            span(ng-repeat='tag in activity.interests')
+              | {{homeCtrl.tags[tag].name}}
+button.create-button(type='button' ng-click='homeCtrl.createActivity()')
+  span
+    | +
+    //- .people-going
+    //-   img(ng-repeat='participant in activity.participants' ng-src='participant.user.avatar_url || ../../assets/default-avatar.png')

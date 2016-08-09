@@ -1,0 +1,350 @@
+/*************** GENERAL ***************/
+
+.main-container {
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size:17px;
+  color:#bd416c;
+  text-align:left;
+  margin-left: 20px;
+}
+
+.checkboxes {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  height: 220px;
+}
+
+.checkbox {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+
+  input[type="checkbox"],
+  label {
+    display: inline-block;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    position: static;
+    margin-left: 0;
+  }
+}
+
+.yellow-button {
+  background-color: $yellow;
+  color: $black;
+  height: 60px;
+  padding-left: 25px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.purple-button {
+  background-color: $light-purple;
+  color: $white;
+  height: 62px;
+  text-transform: uppercase;
+}
+
+/*************** NAVBAR ***************/
+
+.navbar {
+  width: calc(100% - 40px);
+  height: 80px;
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  text-align: left;
+
+  .brand {
+
+  }
+
+  .avatar {
+    float: right;
+    margin: 10px 0;
+  }
+
+}
+
+.search-bar {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 0 20px;
+
+  input {
+    width: 350px;
+    display: inline-block;
+    vertical-align: middle;
+    background:#d8d8d8;
+    border-radius:23px;
+    height:21px;
+  }
+
+  img {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+  }
+}
+
+.form {
+  background-color: $white;
+  text-align: left;
+  padding: 0 20px;
+}
+
+/*************** SIGN IN ***************/
+
+.logo {
+  margin-bottom: 50px;
+}
+
+.signin-form {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+.signin-form input {
+  border: 0;
+  border-bottom: 1px solid gray;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  border: 0;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  &.signin-field {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.form label {
+  margin-bottom: 10px;
+}
+
+.signin-buttons {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  font-size: 0px;
+}
+
+.signin-buttons button {
+  display: inline-block;
+  padding: 0;
+  width: 50%;
+  font-size: 12px;
+}
+
+.signin-container {
+  height: 100vh;
+  background-color: $light-purple;
+  background: url("../assets/background-logo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.signin-recover-password {
+  color: $white;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.signin-form-container {
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 100px;
+}
+
+@media (max-height: 400px) {
+  .signin-form-container {
+    bottom: 0;
+  }
+}
+
+.signup-button {
+  opacity: 0.5;
+}
+
+.signing-start-img {
+  margin-right: 20px;
+}
+
+/*************** SIGN UP ***************/
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.avatar {
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  margin-bottom: 50px;
+}
+
+/*************** HOME ***************/
+
+.feed-list {
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+.feed-item {
+  border-top: 1.5px solid #CCCCCC;
+  text-align: left;
+  width: 360px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  img {
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .description,
+  .main-img,
+  .buttons {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .main-img {
+    width: 40px;
+    margin-right: 10px;
+  }
+
+  .description {
+    width: calc(100% - 130px);
+  }
+
+  .buttons {
+    margin-left: 10px;
+
+    button {
+      display: block;
+    }
+
+    img {
+      height: 25px;
+    }
+  }
+
+  .title {
+    font-size:20px;
+    color: #4a4a4a;
+    text-align:left;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size:10px;
+    color:#babab2;
+    text-align:left;
+    margin-bottom: 15px;
+  }
+}
+
+.tags span {
+  padding: 5px 10px;
+  background:#e7e7e7;
+  border-radius:3px;
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.tags {
+  height: 30px;
+}
+
+.tag-selected {
+  color: #00FF00;
+}
+
+.people-going {
+  img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+}
+
+.act-description {
+  font-size: 14px;
+  color: #4A4A4A;
+  text-align: left;
+  margin: 10px 0px 10px 52px;
+  width: 249px;
+}
+
+.feed-act-description {
+  font-size: 14px;
+  color: #4A4A4A;
+  text-align: left;
+  margin: 10px 0px 10px 0px;
+  width: 249px;
+}
+
+.amount-going {
+  font-size: 20px;
+  color: #4a4a4a;
+  text-align: left;
+  width: 40vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 20px 52px;
+}
+
+.tags div {
+  padding: 5px 10px;
+  background:#e7e7e7;
+  border-radius:3px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+
+  &.tag-selected {
+    background-color: #bd416c;
+    color: white;
+  }
+}
+
+.tags {
+  height: 100%;
+}
+

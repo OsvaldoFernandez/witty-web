@@ -1,0 +1,14 @@
+.signin-container
+	.signin-form-container
+		form.signin-form(ng-submit='signInCtrl.signIn()')
+			input.signin-field(type="email" placeholder="Email" autofocus ng-model='signInCtrl.loginData.email')
+			input.signin-field(type="password" placeholder="Password" ng-model='signInCtrl.loginData.password')
+			button.yellow-button(type="submit")
+				img.signing-start-img(ng-src="../assets/ic_play_arrow.png" align="right")
+				span
+					| Start
+	.signin-buttons
+		button.purple-button
+			| Log in
+		button.purple-button.signup-button
+			| Sign up

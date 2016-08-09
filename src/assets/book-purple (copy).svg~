@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="45px" viewBox="0 0 36 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>book</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="book" stroke="#86428A" stroke-width="1.5">
+            <path d="M35.0526316,12.1873125 L35.0526316,44.0623125 L7.05031579,44.0623125 L5.15557895,44.0623125 C2.53894737,44.0623125 0.947368421,41.9660625 0.947368421,39.3748125 L0.947368421,7.4998125" id="Stroke-205" stroke-linejoin="round"></path>
+            <path d="M10.4210526,12.1873125 L6.10294737,12.1873125 C3.48631579,12.1873125 0.947368421,10.0891875 0.947368421,7.4998125 L0.947368421,5.6248125 C0.947368421,3.0354375 3.48631579,0.9373125 6.10294737,0.9373125 L35.0526316,0.9373125 C32.5667368,3.3991875 32.6046316,9.7648125 35.0526316,12.1873125 L21.7894737,12.1873125" id="Stroke-206" stroke-linejoin="round"></path>
+            <path d="M5.68421053,6 L33.1578947,6" id="Stroke-207"></path>
+            <polyline id="Stroke-208" stroke-linejoin="round" points="10.4210526 6.5623125 10.4210526 29.0623125 16.1052632 23.4373125 21.7894737 29.0623125 21.7894737 6.5623125"></polyline>
+        </g>
+    </g>
+</svg>

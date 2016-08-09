@@ -1,0 +1,17 @@
+h1
+	| Sign up
+form.form(ng-submit='signUpCtrl.signUp()')
+	img.avatar(src="http://placehold.it/200x200")
+	input(type="text" placeholder="Nombre" autofocus ng-model='signUpCtrl.user.name')
+	input(type="text" placeholder="Apellido" autofocus ng-model='signUpCtrl.user.apellido')
+	input(type="text" placeholder="Edad" autofocus ng-model='signUpCtrl.user.edad')
+	input(type="email" placeholder="Email" ng-model='signUpCtrl.user.email')
+	input(type="password" placeholder="Clave" ng-model='signUpCtrl.user.password')
+	input(type="password" placeholder="Confirmar Clave" ng-model='signUpCtrl.user.confirmPassword')
+	h3
+		| Interests
+	.tags
+		div(ng-repeat='tag in signUpCtrl.tags' ng-click='signUpCtrl.addTag(tag)' ng-class='{tag-selected: tag.selected}')
+			| {{tag.name}}
+	input(type="submit")
+

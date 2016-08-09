@@ -1,0 +1,154 @@
+.congrats {
+  width: 300px;
+  margin: 0 auto;
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.activity-details-container {
+  min-height: calc(100vh - 132px);
+}
+
+.details-navbar {
+  width: 100vw;
+  background-color: #8B55A2;
+  color: #FFF;
+  font-size: 16px;
+  height: 30px;
+  padding: 12px 10px;
+  border-bottom: none;
+}
+
+p.details.title {
+  color: #4A4A4A;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+img.details.main-img {
+  float: left;
+  height: 40px;
+  width: 40px;
+  margin-left: 30px;
+}
+
+.feed-list.details {
+  margin-top: 12px;
+}
+
+.description.details {
+  width: 65vw;
+  margin-left: 85px;
+  text-align: initial;
+}
+
+.details.left {
+  background-color: #BD416C;
+  color: #FFF;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.tags.details {
+  margin-top: 10px;
+}
+
+.additional-info.details > p {
+  text-align: initial;
+  font-size: 13px;
+  margin-top: 12px;
+  color: #4A4A4A;
+}
+
+.people-going {
+  width: 100vw;
+  text-align: initial;
+  padding-left: 20px;
+
+  h1 {
+    margin-left: 0;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .person {
+    text-align: center;
+    width: 70px;
+  }
+}
+
+.details.person {
+  display: inline-block;
+
+  p {
+    max-width: 70px;
+  }
+}
+
+.werehere {
+  background-color: #BD416C;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.comments {
+  border-bottom: 1px solid #E4E4E4;
+  margin: 20px -20px;
+}
+
+.comment {
+  text-align: initial;
+  border-top: 1px solid #E4E4E4;
+  height: 70px;
+  width: 100vw;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 10px;
+    float: left;
+  }
+
+  .comment-detail {
+    margin-left: 85px;
+
+    .who {
+      font-weight: 600;
+    }
+
+    .what {
+      width: 280px;
+    }
+  }
+}
+
+.write-comment {
+  border: none;
+  border-bottom: 1px solid #E4E4E4;
+  width: 250px;
+}
+
+.send-comment {
+  background-color: #BD416C;
+  color: #FFF;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.leave-button {
+  width: 100vw;
+  margin: 0 -20px;
+  background-color: #BD416C;
+  height: 50px;
+  margin-top: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 50px;
+}

@@ -1,0 +1,42 @@
+.navbar.details-navbar
+  div(ng-click='detailsCtrl.goHome()')
+    | < Descubrir
+.feed-list.details
+  .activity-details-container
+    img.details.main-img(src="assets/food.svg")
+    .description.details
+      p.details.title
+        | {{detailsCtrl.activity.title}}
+      div(ng-if = 'detailsCtrl.diffSeconds')
+        timer.details.left(countdown=' detailsCtrl.diffSeconds ', interval='1000') {{ddays}} : {{hhours}} : {{mminutes}} : {{sseconds}}
+      .tags.details
+        span(ng-repeat='tag in detailsCtrl.activity.interests')
+          | {{ detailsCtrl.tags[tag].name}}
+      .additional-info.details
+        p.feed-act-description.act-description
+          | {{ detailsCtrl.activity.description}}
+    .people-going
+      h1
+        | People going
+      .details.person(ng-repeat='part in detailsCtrl.activity.participants')
+        img.users-photos(ng-src='{{ part.user.avatar_url || "../../assets/default-avatar.png" }}')
+        p
+          | {{ part.user.first_name }}
+    button.btn.werehere(ng-click='detailsCtrl.throwConfetti()', ng-hide='detailsCtrl.success')
+      | WE'RE HERE!
+    .congrats(ng-show='detailsCtrl.success')
+      img(src='http://66.media.tumblr.com/a173696fa0e315b875c39439be160370/tumblr_n5x66mmJ8S1qh0381o1_500.gif')
+    .comments
+      div.comment(ng-repeat='comment in detailsCtrl.activity.comments')
+        img(ng-src='{{ comment.user.avatar_url || "../../assets/default-avatar.png" }}')
+        .comment-detail
+          p.who
+            | {{ comment.user.first_name }}
+          p.what
+            | {{ comment.content }}
+    form(name='comment', ng-submit='detailsCtrl.addComment() && comment.$valid' novalidate)
+      input.write-comment(type="text" ng-model="detailsCtrl.newComment" placeholder="Write a comment...", required)
+      input.send-comment(type="submit")
+  .leave-button(ng-click='detailsCtrl.leave()')
+    | LEAVE
+

@@ -1,0 +1,78 @@
+.submit-activity-button {
+  padding-top: 25px;
+  text-align: center;
+  button {
+    width: 140px;
+    height: 50px;
+    background-color: #F55E64;
+    border-radius: 15px;
+    span {
+      color: #FFFFFF;
+      font-size: 18px;
+      line-height: 50px;
+      font-weight: bold;
+    }
+  }
+}
+h1.create-title {
+  margin-left: 0;
+}
+
+.create-tags {
+  text-align: center;
+  div {
+    width: 95px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 10px;
+    img {
+      height: 60px;
+      width: 60px;
+    }
+    p {
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+.create-tags div {
+  padding: 5px 10px;
+  background:#e7e7e7;
+  border-radius:3px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+
+  &.tag-selected {
+    background-color: #bd416c;
+    color: white;
+  }
+}
+
+.create-tags {
+  height: 100%;
+}
+
+
+.create-tags span {
+  padding: 5px 10px;
+  background:#e7e7e7;
+  border-radius:3px;
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.tag-selected {
+  color: #00FF00;
+}
+
+.create-title {
+  border: 0;
+  border-bottom: 1px solid #E4E4E4;
+  width: calc(100vw - 36px);
+}
+
+label.create {
+  margin-top: 20px;
+}

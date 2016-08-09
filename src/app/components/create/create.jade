@@ -1,0 +1,97 @@
+.navbar.details-navbar
+  div(ng-click="createCtrl.goHome()")
+    img.witty-logo(src="../../assets/witty-logo.png")
+form.form(name="createForm", ng-submit="createForm.$valid && createCtrl.sendActivity()", novalidate)
+  h1.create-title
+    | Create a new activity
+  input.create-title(type="text" ng-model="createCtrl.activity.title" placeholder="Activity name" autofocus, required)
+  img.location-pin(ng-src='../../assets/ic_pin.svg')
+  label.create
+    | Place name
+  input.create-title(type="text", ng-model="createCtrl.activity.location" placeholder="Enter location..." required)
+  label.create
+    | What is the acitivity about?
+  input.create-title(type="text" ng-model="createCtrl.activity.description" placeholder="Write a comment...", required)
+  label.create
+    | Choose your interest
+  .create-tags
+    div(ng-click="createCtrl.addOrRemoveInterest(0)", ng-class="{'tag-selected': createCtrl.isSelected(0)}",required)
+      img(ng-show='!createCtrl.isSelected(0)' ng-src='{{"../../assets/sports.svg" }}')
+      img(ng-show='createCtrl.isSelected(0)' ng-src='{{"../../assets/sports-white.svg" }}')
+      p
+        | Sports
+    div(ng-click="createCtrl.addOrRemoveInterest(1)", ng-class="{'tag-selected': createCtrl.isSelected(1)}",required)
+      img(ng-show='!createCtrl.isSelected(1)' ng-src='{{"../../assets/music.svg" }}')
+      img(ng-show='createCtrl.isSelected(1)' ng-src='{{"../../assets/music-white.svg" }}')
+      p
+        | Music
+    div(ng-click="createCtrl.addOrRemoveInterest(2)", ng-class="{'tag-selected': createCtrl.isSelected(2)}",required)
+      img(ng-show='!createCtrl.isSelected(2)' ng-src='{{"../../assets/food.svg" }}')
+      img(ng-show='createCtrl.isSelected(2)' ng-src='{{"../../assets/food-white.svg" }}')
+      p
+        | Food
+    div(ng-click="createCtrl.addOrRemoveInterest(3)", ng-class="{'tag-selected': createCtrl.isSelected(3)}",required)
+      img(ng-show='!createCtrl.isSelected(3)' ng-src='{{"../../assets/nightlife.svg" }}')
+      img(ng-show='createCtrl.isSelected(3)' ng-src='{{"../../assets/nightlife-white.svg" }}')
+      p
+        | Nightlife
+    div(ng-click="createCtrl.addOrRemoveInterest(4)", ng-class="{'tag-selected': createCtrl.isSelected(4)}",required)
+      img(ng-show='!createCtrl.isSelected(4)' ng-src='{{"../../assets/pets.svg" }}')
+      img(ng-show='createCtrl.isSelected(4)' ng-src='{{"../../assets/pets-white.svg" }}')
+      p
+        | Pets
+    div(ng-click="createCtrl.addOrRemoveInterest(5)", ng-class="{'tag-selected': createCtrl.isSelected(5)}",required)
+      img(ng-show='!createCtrl.isSelected(5)' ng-src='{{"../../assets/coffee.svg" }}')
+      img(ng-show='createCtrl.isSelected(5)' ng-src='{{"../../assets/coffee-white.svg" }}')
+      p
+        | Coffee
+    div(ng-click="createCtrl.addOrRemoveInterest(6)", ng-class="{'tag-selected': createCtrl.isSelected(6)}",required)
+      img(ng-show='!createCtrl.isSelected(6)' ng-src='{{"../../assets/beer.svg" }}')
+      img(ng-show='createCtrl.isSelected(6)' ng-src='{{"../../assets/beer-white.svg" }}')
+      p
+        | Beer
+    div(ng-click="createCtrl.addOrRemoveInterest(7)", ng-class="{'tag-selected': createCtrl.isSelected(7)}",required)
+      img(ng-show='!createCtrl.isSelected(7)' ng-src='{{"../../assets/movies.svg" }}')
+      img(ng-show='createCtrl.isSelected(7)' ng-src='{{"../../assets/movies-white.svg" }}')
+      p
+        | Movies
+    div(ng-click="createCtrl.addOrRemoveInterest(8)", ng-class="{'tag-selected': createCtrl.isSelected(8)}",required)
+      img(ng-show='!createCtrl.isSelected(8)' ng-src='{{"../../assets/outdoors.svg" }}')
+      img(ng-show='createCtrl.isSelected(8)' ng-src='{{"../../assets/outdoors-white.svg" }}')
+      p
+        | Outdoors
+    div(ng-click="createCtrl.addOrRemoveInterest(9)", ng-class="{'tag-selected': createCtrl.isSelected(9)}",required)
+      img(ng-show='!createCtrl.isSelected(9)' ng-src='{{"../../assets/books.svg" }}')
+      img(ng-show='createCtrl.isSelected(9)' ng-src='{{"../../assets/books-white.svg" }}')
+      p
+        | Books
+    div(ng-click="createCtrl.addOrRemoveInterest(10)", ng-class="{'tag-selected': createCtrl.isSelected(10)}",required)
+      img(ng-show='!createCtrl.isSelected(10)' ng-src='{{"../../assets/default.svg" }}')
+      img(ng-show='createCtrl.isSelected(10)' ng-src='{{"../../assets/default-white.svg" }}')
+      p
+        | Shopping
+    div(ng-click="createCtrl.addOrRemoveInterest(11)", ng-class="{'tag-selected': createCtrl.isSelected(11)}",required)
+      img(ng-show='!createCtrl.isSelected(11)' ng-src='{{"../../assets/art.svg" }}')
+      img(ng-show='createCtrl.isSelected(11)' ng-src='{{"../../assets/art-white.svg" }}')
+      p
+        | Art
+    div(ng-click="createCtrl.addOrRemoveInterest(12)", ng-class="{'tag-selected': createCtrl.isSelected(12)}",required)
+      img(ng-show='!createCtrl.isSelected(12)' ng-src='{{"../../assets/weird_stuff.svg" }}')
+      img(ng-show='createCtrl.isSelected(12)' ng-src='{{"../../assets/weird_stuff-white.svg" }}')
+      p
+        | Weird stuff
+    div(ng-click="createCtrl.addOrRemoveInterest(13)", ng-class="{'tag-selected': createCtrl.isSelected(13)}",required)
+      img(ng-show='!createCtrl.isSelected(13)' ng-src='{{"../../assets/gaming.svg" }}')
+      img(ng-show='createCtrl.isSelected(13)' ng-src='{{"../../assets/gaming-white.svg" }}')
+      p
+        | Gaming
+    div(ng-click="createCtrl.addOrRemoveInterest(14)", ng-class="{'tag-selected': createCtrl.isSelected(14)}",required)
+      img(ng-show='!createCtrl.isSelected(14)' ng-src='{{"../../assets/geek.svg" }}')
+      img(ng-show='createCtrl.isSelected(14)' ng-src='{{"../../assets/geek-white.svg" }}')
+      p
+        | Geek
+  .submit-activity-button
+    button(type="submit")
+      span
+        | CREATE
+
